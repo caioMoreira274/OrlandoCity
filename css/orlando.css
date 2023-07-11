@@ -109,6 +109,12 @@ header .header-black li a {
 header #logotipo {
 	position: absolute;
 	top: 20px;
+	z-index: 10	;
+}
+#banner h1.efeito{
+	color: #5E2799;
+	font-size: 12em;
+	transition: 1s;
 }
 #menu {
 	margin: 12px 0;
@@ -120,6 +126,11 @@ header #logotipo {
 }
 #menu li.search{
 	width: 182px;
+	transition-timing-function: cubic-bezier(1, -.5, 0.5, 1);
+	transition-duration: 1s;
+}
+#menu li.search.ativo{
+	width: 300px;
 }
 #menu li.search input{
 	background-color: #5E299A;
@@ -127,7 +138,10 @@ header #logotipo {
 	border: none;
 	height: 30px;
 	line-height: 30px;
-
+	padding-left: 8px;
+}
+#menu li.search.ativo input{
+	width: 300px;
 }
  #menu li.search ::-webkit-input-placeholder{
 	color: #fff;
@@ -171,6 +185,7 @@ header #logotipo {
 	font-size: 100px;
 	text-shadow: 2px 2px rgba(0, 0, 0, .45);
 	font-family: 'OpenSans-Light';
+	transition: 1s;
 }
 #banner h1 small{
 	color: #fff;
@@ -214,11 +229,19 @@ header #logotipo {
 #news .thumbnails time{
 	color: #A7A7A7;
 	font-size: 18px;
+	font-family: 'OpenSans-Regular';
+}
+#news .thumbnails .item-inner{
+	padding: 10px;
+}
+#news .thumbnails .item-inner img{
+	width: 100%;
 }
 #estatisticas{
 	background-color: #5E299A;
 	width: 100%;
 	height: 200px;
+	text-align: center;
 }
 #estatisticas p{
 	font-size: 64px;
