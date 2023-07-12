@@ -206,6 +206,11 @@ header #logotipo {
 	font-size: 48px;
 	text-transform: uppercase;
 	text-align: center; 
+	transition: 1s;
+}
+#news h2.efeito{
+	font-size: 60px;
+	transition: 1s;
 }
 #news hr{
 	border: #FDE192 solid 4px;
@@ -261,24 +266,19 @@ header #logotipo {
 	margin: 0;
 }
 #call-to-action{
-	width: 100%;
-	height: 459px;
-	color: #fff;
+	text-align: center;
+	margin-top: 105px;
 }
 #call-to-action h2{
 	color: #5E2799;
 	font-family: 'OpenSans-Light';
 	font-size: 48px;
 	text-align: center; 
-	position: relative; 
-	top: 100px;
 }
 #call-to-action hr{
 	border: #FDE192 solid 4px;
 	width: 200px;
 	margin: 0 auto;
-	position: relative; 
-	top: 95px;
 } 
  #call-to-action p{
  	font-size: 18px;

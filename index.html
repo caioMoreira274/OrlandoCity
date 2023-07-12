@@ -58,6 +58,8 @@
 					
 					<nav id="menu" class="pull-right">
 						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="videos.html">Videos</a></li>
 							<li><a href="#">Tickets</a></li>
 							<li><a href="#">News</a></li>
 							<li><a href="#">Schedule</a></li>
@@ -208,8 +210,11 @@
 				
 				</div><!--estatisticas-->
 
-				<div id="call-to-action">
+			</section>
 
+			<section>
+				<div id="call-to-action">
+			
 					<div class="container">		
 
 						<div class="row text-center">
@@ -354,6 +359,15 @@
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 		<script>
 		$(document).ready(function(){
+			$("#news h2").on("mouseover", function(){
+				
+				$("#news h2").addClass("efeito");
+					
+			}).on("mouseout", function(){
+				
+				$("#news h2").removeClass("efeito");
+
+			});
 
 			$("#logotipo").on("mouseover", function(){
 				
