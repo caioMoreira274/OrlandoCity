@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="lib/OwlCarousel2/dist/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="css/orlando.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<link rel="stylesheet" href="lib/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick/slick/slick.css">
+		<link rel="stylesheet" href="lib/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick/slick/slick-theme.css">
 
 		
 	</head>
@@ -92,17 +94,74 @@
 						<div class="row text-center">
 
 							<div>
-								<video controls poster="img/Orlando_City_Foundation_2015.jpg">
+								<video controls autoplay="true" poster="img/Orlando_City_Foundation_2015.jpg">
 									<source src="mp4/highlights.mp4"  type="video/mp4">
 								</video>
 							</div>
 
 						</div>
 
-
-
 					</div><!--container-->
 				</div><!--call-to-action-->
+
+				<div id="news" class="container" style="top:0">
+				
+					<div class="row text-center">
+						<h2>Latest News</h2>
+						<hr>	
+					</div><!--row-->
+					
+					<div class="row row-noticias">
+						
+						<div class="slider demo" style="margin-top: 50px;">
+							
+							<div class="bloco-noticia" data-video="highlights">
+								<img src="img/highlights.jpg" alt="Noticia">
+								<h3>Highlights</h3>
+							</div>
+																			
+							<div class="bloco-noticia" data-video="Orlando_City_Foundation_2015">
+								<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+								<h3>Orland City Foundation 2015</h3>
+							</div>
+							
+							
+							<div class="bloco-noticia" data-video="highlights">
+								<img src="img/highlights.jpg" alt="Noticia">
+								<h3>Highlights</h3>								
+							</div>
+																			
+							<div class="bloco-noticia" data-video="Orlando_City_Foundation_2015">
+								<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+								<h3>Orland City Foundation 2015</h3>
+							</div>
+							
+							
+							<div class="bloco-noticia" data-video="highlights">
+								<img src="img/highlights.jpg" alt="Noticia">
+								<h3>Highlights</h3>								
+							</div>
+																			
+							<div class="bloco-noticia" data-video="Orlando_City_Foundation_2015">
+								<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+								<h3>Orland City Foundation 2015</h3>
+							</div>
+							<div class="bloco-noticia" data-video="highlights">
+								<img src="img/highlights.jpg" alt="Noticia">
+								<h3>Highlights</h3>								
+							</div>
+																			
+							<div class="bloco-noticia" data-video="Orlando_City_Foundation_2015">
+								<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+								<h3>Orland City Foundation 2015</h3>
+							</div>
+							
+																						
+						</div>
+
+					</div>
+
+				</div><!--news-->
 
 			</section>
 
@@ -212,58 +271,26 @@
 		<script src="lib/jquery/jquery.min.js"></script>
 		<script src="lib/OwlCarousel2/dist/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="lib/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick/slick/slick.js"></script>
+		<script src="js/efeitos.js"></script>
 		<script>
-		$(document).ready(function(){
-			$("#news h2").on("mouseover", function(){
-				
-				$("#news h2").addClass("efeito");
-					
-			}).on("mouseout", function(){
-				
-				$("#news h2").removeClass("efeito");
+			
+		$(function(){
 
-			});
+			$(".row-noticias .bloco-noticia").on("click", function(){
 
-			$("#logotipo").on("mouseover", function(){
+				console.log();
+				$("video").attr({
+					"src": "mp4/" + $(this).data('video') + ".mp4" ,
+					"poster": "img/" + $(this).data('video') + ".jpg"
+
 				
-				$("#banner h1").addClass("efeito");
-			
-			}).on("mouseout", function(){
-			
-				$("#banner h1").removeClass("efeito");
-			
-			});
-			
-			$("#input-search").on("focus", function(){
-			
-				$("li.search").addClass("ativo");
-			
-			}).on("blur", function(){
-			
-				$("li.search").removeClass("ativo")
-			
-			});
+				})
 
-			$(".thumbnails").owlCarousel({
-				autoplay: true,
-				loop:true,
-				nav:true,
-				margin: 10,
-				navText: ["Anterior", "Próximo"],
-				responsive: {
-					0:{
-						items: 1
-					},
-					480:{
-						items: 3
-					},
-					1000: {
-						items: 4
-					}
-				}
 			});
 
 		});
+		
 		</script>
 
 	</body>
