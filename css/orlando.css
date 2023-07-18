@@ -272,6 +272,9 @@ header #logotipo {
 	text-align: center;
 	margin-top: 105px;
 }
+#call-to-action video{
+	width: 900px;
+}
 #call-to-action h2{
 	color: #5E2799;
 	font-family: 'OpenSans-Light';
